@@ -25,9 +25,10 @@
                 <div class="my-card">
                     <h3 class="title">Add new task</h3>
                     <div class="commands d-flex align-items-centers">
-                        <input type="text" class="mr-2" placeholder="at least 5 characters" v-model="newTask">
-                        <button class="button">Add task</button>
+                        <input type="text" class="mr-2" placeholder="at least 5 characters" v-model="newTask.text">
+                        <button class="button" @click="addTask">Add task</button>
                     </div>
+                    <small class="text-danger mt-1" v-if="error">Please insert at least 5 characters</small>
                     <div class="tasks pt-5">
                         <h4 class="title">To do list</h4>
                         <ul>

@@ -24,26 +24,45 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
-            newTask : '',
-            tasks : [
-                {
-                    text: 'learn HTML',
-                    done: true
-                },
-                {
-                    text: 'learn CSS',
-                    done: false
-                },
-                {
-                    text: 'learn JavaScript',
-                    done: false
-                },
+            error: false,
+            newTask: {
+                text: '',
+                done: false
+            },
+            tasks: [
                 {
                     text: 'learn VueJS',
                     done: false
                 },
+                {
+                    text: 'learn JavaScript',
+                    done: true
+                },
+                {
+                    text: 'learn CSS',
+                    done: true
+                },
+                {
+                    text: 'learn HTML',
+                    done: true
+                },
             ]
         }
-    }
+    },
+    methods: {
+        addTask() {
+            if (this.newTask.text.length < 5) {
+                //messaggio di errore
+                console.log('error 01 "lenght" non soddisfatta!')
+                this.error = true
+            } else {
+                this.tasks.unshift(this.newTask)
+                this.newTask = {
+                    text: '',
+                    done: false
+                }
+            }
+        }
+    },
 }).mount('#app')
 

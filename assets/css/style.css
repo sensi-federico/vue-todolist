@@ -56,3 +56,10 @@ body {
     margin-bottom: 5px;
 }
 
+/* .fa-circle-xmark, .fa-check-circle:hover{
+    cursor: pointer;
+} */
+
+li:hover{
+    cursor: pointer;
+}
