@@ -56,7 +56,7 @@ createApp({
                 console.log('error 01 "lenght" non soddisfatta!')
                 this.error = true
             } else {
-                this.tasks.push(this.newTask)
+                this.tasks.unshift(this.newTask)
                 this.newTask = {
                     text: '',
                     done: false
