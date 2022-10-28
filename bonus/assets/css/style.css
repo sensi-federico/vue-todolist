@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: lightslategray;
+}
+
+.my-card {
+    background-color: whitesmoke;
+    border-radius: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    margin: auto;
+}
+
+.tasks {
+    width: 80%;
+}
+
+.button {
+    background-color: lightslategrey;
+    border: none;
+    padding: 5px;
+    font-size: small;
+    border-radius: 4px;
+    opacity: 0.6;
+    transition: all .4s ease 0s;
+}
+
+.button:hover {
+    color: white;
+    opacity: 1;
+}
+
+.fa-solid {
+    margin-top: 4px;
+    margin-left: 7px;
+    color: red;
+}
+
+.fa-check-circle {
+    margin-top: 4px;
+    margin-left: 7px;
+    color: green;
+}
+
+.fa-circle {
+    scale: 0.4;
+    margin-bottom: 5px;
+}
+
+/* .fa-circle-xmark, .fa-check-circle:hover{
+    cursor: pointer;
+} */
+
+li:hover{
+    cursor: pointer;
+}
+
