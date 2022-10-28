@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: lightslategray;
+}
+
+.my-card {
+    background-color: whitesmoke;
+    border-radius: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    margin: auto;
+}
+
+.tasks {
+    width: 80%;
+}
+
+.button {
+    background-color: lightslategrey;
+    border: none;
+    padding: 5px;
+    font-size: small;
+    border-radius: 4px;
+    opacity: 0.6;
+    transition: all .4s ease 0s;
+}
+
+.button:hover {
+    color: white;
+    opacity: 1;
+}
