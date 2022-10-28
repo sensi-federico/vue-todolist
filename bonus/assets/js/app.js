@@ -56,7 +56,7 @@ createApp({
                 console.log('error 01 "lenght" non soddisfatta!')
                 this.error = true
             } else {
-                this.tasks.unshift(this.newTask)
+                this.tasks.push(this.newTask)
                 this.newTask = {
                     text: '',
                     done: false
@@ -66,11 +66,14 @@ createApp({
         },
         taskDone(index) {
             console.log('task clicked')
-            if (this.tasks[index].done == false){
+            if (this.tasks[index].done == false) {
                 this.tasks[index].done = true
             } else {
                 this.tasks[index].done = false
             }
+        },
+        removeTask(index) {
+            this.tasks.splice(index, 1)
         }
     }
 }).mount('#app')

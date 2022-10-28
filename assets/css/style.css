@@ -60,6 +60,17 @@ body {
     cursor: pointer;
 } */
 
+li{
+    position: relative;
+}
+
 li:hover{
     cursor: pointer;
+}
+
+.btn {
+    scale: 0.5;
+    position: absolute;
+    top: -8px;
+    left: 250px;
 }

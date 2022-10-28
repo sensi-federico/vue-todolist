@@ -38,6 +38,7 @@
                                 <p v-else>{{tasks[i].text}}</p>
                                 <i class="fa fa-check-circle" v-if="tasks[i].done"></i>
                                 <i class="fa-solid fa-circle-xmark" v-else></i>
+                                <button class="btn btn-danger" v-if="tasks[i].done" @click.stop="removeTask(i)"><i class="fa fa-xmark"></i></button>
                             </li>
                         </ul>
                     </div>
