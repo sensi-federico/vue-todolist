@@ -25,18 +25,19 @@
                 <div class="my-card">
                     <h3 class="title">Add new task</h3>
                     <div class="commands d-flex align-items-centers">
-                        <input type="text" class="mr-2" placeholder="at least 5 characters">
+                        <input type="text" class="mr-2" placeholder="at least 5 characters" v-model="newTask">
                         <button class="button">Add task</button>
                     </div>
                     <div class="tasks pt-5">
                         <h4 class="title">To do list</h4>
                         <ul>
-                            <li class="task mb-2">ciao</li>
-                            <li class="task mb-2">ciao</li>
-                            <li class="task mb-2">ciao</li>
-                            <li class="task mb-2">ciao</li>
-                            <li class="task mb-2">ciao</li>
-                            <li class="task mb-2">ciao</li>
+                            <li class="task mb-2 d-flex" v-for="(task, i) in tasks">
+                                <i class="fa fa-circle" aria-hidden="true"></i>
+                                <p class="text-decoration-line-through" v-if="tasks[i].done" >{{tasks[i].text}}</p>
+                                <p v-else>{{tasks[i].text}}</p>
+                                <i class="fa fa-check-circle" v-if="tasks[i].done"></i>
+                                <i class="fa-solid fa-circle-xmark" v-else></i>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -44,8 +45,8 @@
         </div>
     </div>
 
-    <!-- <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> -->
-    <script src="./assets/js/app.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@3.2.41/dist/vue.global.min.js"></script>
+    <script src="./assets/js/app.js"></script>
 </body>
 
 </html>
